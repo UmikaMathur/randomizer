@@ -6,6 +6,7 @@ let r = 0;
 let image_size_x = [50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 720]
 let image_size_y = [28, 56, 83, 111, 139, 167, 194, 222, 250, 278, 306, 333, 361, 400]
 let size = 0;
+let button;
 
 function preload() {
    img1 = loadImage("unnamed.jpg");
@@ -27,6 +28,10 @@ function setup() {
   textFont('Courier New');
   textSize(30);
   text("click to randomize :)", 130, 200);
+
+button = createButton("click to randomize :)";
+button.mousePressed(buttonPressed);
+
   fruits [0] = img1;
   fruits [1] = img2;
   fruits [2] = img3;
@@ -49,6 +54,11 @@ function drawImage(){
   		setTimeout(drawImage, 200);
   	}
 
+}
+
+function buttonPressed() {
+
+  
 }
 
 /*
